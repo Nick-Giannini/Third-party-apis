@@ -27,13 +27,21 @@ $(document).ready(function () {
 
 
 
-
+//update function.
   function update() {
+    // for loop goes though all the elements with class timeBlocks.
     for (let index = 0; index < timeBlocks.length; index++) {
+      //get the id of the selected element
       var id = $(timeBlocks[index]).attr('id');
+      //slices the string and only takes the last 2 characters. It then converts the string to a number.
       var idnum = parseInt(id.slice(5, 7));
-      $(timeBlocks[index]).removeClass('present future present');
 
+      //removes 3 classes from the timelock
+      $(timeBlocks[index]).removeClass('present future present');
+      
+      
+      
+      
       if (idnum < hour) {
         // $(timeBlocks[index]).removeClass('present future');
         // $(timeBlocks[index]).addClass('row time-block past');
