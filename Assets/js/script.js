@@ -1,19 +1,24 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
+// jQuery ready function that runs onces the browser finished rending all the elements in the html.
 $(document).ready(function () {
-  var today = dayjs();
+
+  //global variables. var today and hour are using dayjs() functions and formated differently.
+  var today = dayjs().format('dddd	MMM D, YYYY');
   var hour = dayjs().format('H');
+  
+  //selects the element with the class .time-block
   var timeBlocks = $('.time-block');
-  var test = 10;
 
-
+//calls the update functions
   update();
+
+//calls the update functions every minute
   setInterval(function() {update()},60000);
 
-  $('#currentDay').text(today.format('dddd	MMM D, YYYY'));
+  // targets the element with id currentDay and add text to it
+  $('#currentDay').text(today);
 
+  // adds event listener to all elements with class btn. When clicked the id of the parent element the value of the text field is saved to localstorage
   $('.btn').on('click', function () {
     var id = $(this).parent().attr('id');
     var task = $(this).siblings(".description").val();
