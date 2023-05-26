@@ -1,10 +1,9 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
-## Your Task
+## Task
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+We were given start code for html and css files but had to create everything in the js file.
+Our task was to create an application that allows the user to save events for each hour of the work day. The current day us displayed at the top of the page and the entries change color based on the hour. This is done using the using the Day.js library.
 
 ## User Story
 
@@ -34,7 +33,6 @@ THEN the saved events persist
 
 The following animation demonstrates the application functionality:
 
-<!-- @TODO: create ticket to review/update image) -->
 ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/images/05-third-party-apis-homework-demo.gif)
 
 
